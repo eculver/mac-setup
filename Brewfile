@@ -16,7 +16,7 @@ brew 'zsh'
 brew 'pianobar'
 brew 'yarn'
 brew 'shellcheck'
-brew 'eslint'
+brew 'fasd'
 
 cask 'backblaze'
 cask 'butler'
