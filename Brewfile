@@ -14,6 +14,7 @@ brew 'tmux'
 brew 'vim'
 brew 'zsh'
 brew 'pianobar'
+brew 'yarn'
 
 cask 'backblaze'
 cask 'butler'
