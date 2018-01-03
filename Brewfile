@@ -15,6 +15,7 @@ brew 'vim'
 brew 'zsh'
 brew 'pianobar'
 brew 'yarn'
+brew 'shellcheck'
 
 cask 'backblaze'
 cask 'butler'
