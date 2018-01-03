@@ -11,11 +11,12 @@ brew 'the_silver_searcher'
 brew 'docker'
 brew 'docker-compose'
 brew 'tmux'
-brew 'vim'
+brew 'vim', args: ['--with-lua', '--override-system-vi']
 brew 'zsh'
 brew 'pianobar'
 brew 'yarn'
 brew 'shellcheck'
+brew 'eslint'
 
 cask 'backblaze'
 cask 'butler'
