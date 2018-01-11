@@ -23,6 +23,7 @@ brew 'zsh'
 
 cask 'backblaze'
 cask 'butler'
+cask 'docker'
 cask 'flux'
 cask 'gpg-suite'
 cask 'iterm2'
