@@ -28,6 +28,14 @@ CONFIG=(
     Fonts
 )
 
+PREFS=(
+    # Mouse: gestures
+    # Keyboard: repeat, modifiers
+    # Battery: percent
+    # Dock: smaller, auto-hide, cleaned
+    # Clock: date, 24-hour
+)
+
 POST_INSTALL=( vim-vundle )
 
 set_shell_to_zsh() {
