@@ -8,24 +8,23 @@
 # These apps don't exist as homebrew casks so they will be downloaded from an
 # "App registry" that I maintain at pkgs.distributed.io/apps
 APPS=(
-    Butler
-    ClipMenu
     iStats
     Alfred
-    PathFinder
+    Backblaze
+    RescueTime
 )
 
-# These have to be installed with a special fu of some variety
-TOOLS=(
-    XCode
-    Homebrew
-    GVM
-)
+
 
 # These can be installed with `go get -u`
 GOBINS=(
     github.com/sourcegraph/go-langserver
     github.com/derekparker/delve/cmd/dlv
+)
+
+# Global python packages to be installed with `pip3 install ...`
+PYPIPS=(
+    neovim
 )
 
 CONFIG=(
@@ -35,6 +34,7 @@ CONFIG=(
     Fonts
 )
 
+# MacOS `defaults`
 PREFS=(
     # Mouse: gestures
     # Keyboard: repeat, modifiers
@@ -43,13 +43,13 @@ PREFS=(
     # Clock: date, 24-hour
 )
 
-POST_INSTALL=( vim-vundle )
-
 set_shell_to_zsh() {
     echo "link .zshrc"
     echo "link .zshrc.d"
     echo "restore .zsh_history"
     echo "install .oh-my-zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    echo "install plugins"
     echo "change shell to /bin/zsh"
 }
 
@@ -77,13 +77,17 @@ main() {
     #  install homebrew + bundles
     #  install gobins
     #  install config
-    install_gobins
 
+    #  mkdir ~/.rubies -- add to dotfiles
+    #  ruby-install $RUBY_VERSION  -- get latest ruby version?
+    #  tmux plugins
+    #  import gpg key?
+    #  gpg --list-secret-keys --keyid-format LONG
+    #  git config --global user.signingkey $KEY
 
     echo "APPS: ${APPS[*]}"
     echo "TOOLS: ${TOOLS[*]}"
     echo "CONFIG: ${CONFIG[*]}"
-    echo "POST_INSTALL: ${POST_INSTALL[*]}"
 }
 
 main "$@"
